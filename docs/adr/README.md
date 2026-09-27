@@ -13,3 +13,6 @@ Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md`
 | [0007](0007-embeddings-fijos-al-arranque.md) | Embeddings fijos al arranque y separados del LLM | Aceptada |
 | [0008](0008-catalogo-de-modelos-de-embeddings.md) | Catálogo de modelos de embeddings | Aceptada |
 | [0009](0009-disponibilidad-de-embeddings-con-isready.md) | Disponibilidad de embeddings con isReady | Aceptada |
+| [0010](0010-qdrant-como-base-vectorial.md) | Qdrant como base vectorial detrás de una interfaz | Aceptada |
+| [0011](0011-creacion-perezosa-de-la-coleccion.md) | Creación perezosa de la colección y verificación con isReady | Aceptada |
+| [0012](0012-bounding-boxes-normalizados.md) | Bounding boxes normalizados | Aceptada |
