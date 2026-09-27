@@ -10,3 +10,6 @@ Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md`
 | [0004](0004-solo-ollama-persiste-en-volumen.md) | Solo Ollama persiste en volumen | Aceptada |
 | [0005](0005-proveedores-de-llm-intercambiables.md) | Proveedores de LLM intercambiables | Aceptada |
 | [0006](0006-registro-de-modelos-en-llmservice.md) | Registro de modelos en LlmService | Aceptada |
+| [0007](0007-embeddings-fijos-al-arranque.md) | Embeddings fijos al arranque y separados del LLM | Aceptada |
+| [0008](0008-catalogo-de-modelos-de-embeddings.md) | Catálogo de modelos de embeddings | Aceptada |
+| [0009](0009-disponibilidad-de-embeddings-con-isready.md) | Disponibilidad de embeddings con isReady | Aceptada |
