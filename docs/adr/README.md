@@ -1,0 +1,10 @@
+# Architecture Decision Records
+
+Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md` usando el formato de Michael Nygard (ver [plantilla](template.md)).
+
+| # | Decisión | Estado |
+|---|----------|--------|
+| [0001](0001-registrar-decisiones-con-adr.md) | Registrar decisiones con ADR | Aceptada |
+| [0002](0002-contenerizacion-con-docker-compose.md) | Contenerización con Docker Compose | Aceptada |
+| [0003](0003-arquitectura-en-capas.md) | Arquitectura en capas con módulos de NestJS | Aceptada |
+| [0004](0004-solo-ollama-persiste-en-volumen.md) | Solo Ollama persiste en volumen | Aceptada |
