@@ -27,3 +27,9 @@ Alternativas consideradas: PyMuPDF o pdfplumber (requieren un servicio Python pr
 - `hi_res` es lento: un PDF de una página con título, tabla e imagen tardó unos 24 segundos en CPU.
 - Las coordenadas llegan en píxeles de la página renderizada (`PixelSpace`), por lo que se normalizan (ver [0012](0012-bounding-boxes-normalizados.md)).
 - La inferencia de estructura de tablas no siempre es fiable: en las pruebas, el HTML de una tabla simple perdió filas mientras que su texto plano estaba completo.
+
+## Actualización (2026-09-27)
+
+**Problema encontrado en pruebas:** al procesar un segundo documento, Unstructured respondió `503 Server is under heavy load`. Por defecto rechaza peticiones si hay menos de 2048 MB libres, y con la memoria por defecto de Docker Desktop (3,7 GB en el equipo de pruebas) sus modelos cargados ya ocupan 1,3 GB.
+
+**Solución:** se fija `UNSTRUCTURED_MEMORY_FREE_MINIMUM_MB=512` en el compose y el README recomienda asignar al menos 8 GB a Docker, con la configuración de `.wslconfig` para Windows. Con poca memoria, un documento grande podría hacer que el sistema termine el contenedor en lugar de rechazar la petición. El 503 de Unstructured se tratará como un error reintentable en el paso de resiliencia.
