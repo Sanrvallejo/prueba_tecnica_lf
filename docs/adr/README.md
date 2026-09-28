@@ -16,3 +16,4 @@ Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md`
 | [0010](0010-qdrant-como-base-vectorial.md) | Qdrant como base vectorial detrás de una interfaz | Aceptada |
 | [0011](0011-creacion-perezosa-de-la-coleccion.md) | Creación perezosa de la colección y verificación con isReady | Aceptada |
 | [0012](0012-bounding-boxes-normalizados.md) | Bounding boxes normalizados | Aceptada |
+| [0013](0013-extraccion-con-unstructured.md) | Extracción de PDF con Unstructured en hi_res | Aceptada |
