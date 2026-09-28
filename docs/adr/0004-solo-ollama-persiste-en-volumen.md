@@ -16,3 +16,7 @@ Solo Ollama usa un volumen con nombre (`ollama_models`). Qdrant y Redis son efí
 
 - Los modelos se descargan una sola vez.
 - Cada `docker compose down` deja el sistema sin documentos indexados ni trabajos, lo que simplifica las demostraciones desde cero.
+
+## Actualización (2026-09-27)
+
+Las imágenes extraídas de los documentos también persisten, en el volumen `api_images`, como excepción a esta política. Ver [0016](0016-imagenes-en-disco-con-volumen.md).
