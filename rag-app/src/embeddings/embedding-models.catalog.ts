@@ -12,8 +12,8 @@ export const EMBEDDING_MODELS: Record<string, EmbeddingModelSpec> = {
     documentPrefix: 'search_document: ',
     queryPrefix: 'search_query: ',
     maxInputChars: 4000,
-    // Provisional: se recalibra tras las correcciones de chunking (ADR-0018).
-    minScore: 0.62,
+    // Calibrado con dos documentos; el margen es estrecho (ADR-0018).
+    minScore: 0.61,
   },
   // Contexto de 8191 tokens.
   'text-embedding-3-small': {
