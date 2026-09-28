@@ -29,7 +29,8 @@
     "@qdrant/js-client-rest": "^1.19.0",
     "openai": "^7.23.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "undici": "^8.11.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^12.0.0",
