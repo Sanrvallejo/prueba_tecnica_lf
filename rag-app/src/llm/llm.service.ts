@@ -38,6 +38,11 @@ export class LlmService {
     return [...this.clients.keys()];
   }
 
+  /** Primer modelo registrado: Ollama, que siempre está disponible. */
+  defaultModel(): string {
+    return this.listModels()[0];
+  }
+
   generate(modelId: string, messages: ChatMessage[]): Promise<string> {
     const client = this.clients.get(modelId);
     if (!client) {
