@@ -16,11 +16,19 @@ export class EmbeddingsService {
     return this.client.dimension;
   }
 
-  async embedDocuments(texts: string[]): Promise<number[][]> {
+  /**
+   * @param onBatch se llama tras cada lote con los textos procesados y el
+   * total, para reportar progreso.
+   */
+  async embedDocuments(
+    texts: string[],
+    onBatch?: (done: number, total: number) => Promise<void> | void,
+  ): Promise<number[][]> {
     const vectors: number[][] = [];
     for (let i = 0; i < texts.length; i += EMBEDDING_BATCH_SIZE) {
       const batch = texts.slice(i, i + EMBEDDING_BATCH_SIZE);
       vectors.push(...(await this.client.embedDocuments(batch)));
+      await onBatch?.(vectors.length, texts.length);
     }
     return vectors;
   }
