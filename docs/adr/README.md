@@ -18,4 +18,6 @@ Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md`
 | [0012](0012-bounding-boxes-normalizados.md) | Bounding boxes normalizados | Aceptada |
 | [0013](0013-extraccion-con-unstructured.md) | Extracción de PDF con Unstructured en hi_res | Aceptada |
 | [0014](0014-chunking-por-layout.md) | Chunking por layout propio | Aceptada |
+| [0015](0015-ingesta-asincrona-con-bullmq.md) | Ingesta asíncrona con BullMQ | Aceptada |
 | [0016](0016-imagenes-en-disco-con-volumen.md) | Imágenes en disco servidas como estáticos, con volumen | Aceptada |
+| [0017](0017-verificacion-de-salud.md) | Verificación de salud con GET /health | Aceptada |
