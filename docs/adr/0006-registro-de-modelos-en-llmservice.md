@@ -24,3 +24,7 @@ El usuario elige el modelo desde el frontend en cada pregunta, por lo que la API
 - El frontend solo ofrece modelos realmente configurados.
 - Agregar un proveedor implica registrarlo en el constructor de `LlmService`.
 - Que un modelo esté registrado no garantiza que responda (por ejemplo, si Ollama no ha descargado el modelo); el error aparece al usarlo.
+
+## Actualización (2026-09-28)
+
+En `POST /chat` el modelo es opcional: si no se indica, se usa `LlmService.defaultModel()`, el primer modelo registrado, que siempre es Ollama. Un id no registrado responde `400` antes de hacer la búsqueda semántica, para que el error no dependa de si hubo contexto relevante.
