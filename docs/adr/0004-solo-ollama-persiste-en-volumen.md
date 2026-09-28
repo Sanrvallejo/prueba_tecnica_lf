@@ -20,3 +20,7 @@ Solo Ollama usa un volumen con nombre (`ollama_models`). Qdrant y Redis son efí
 ## Actualización (2026-09-27)
 
 Las imágenes extraídas de los documentos también persisten, en el volumen `api_images`, como excepción a esta política. Ver [0016](0016-imagenes-en-disco-con-volumen.md).
+
+## Actualización (2026-09-28)
+
+**Hallazgo en pruebas:** las imágenes de Redis (`/data`) y Qdrant declaran volúmenes anónimos. `docker compose up --force-recreate` los reutiliza, por lo que sus datos sobreviven a recrear el contenedor; en las pruebas, los trabajos de ingesta anteriores seguían listados tras recrear Redis. Los datos solo se pierden con `docker compose down` (el contenedor siguiente recibe un volumen anónimo nuevo) o recreando con `-V` (`--renew-anon-volumes`). Para empezar desde cero sin tocar los modelos de Ollama: `docker compose up -d --force-recreate -V qdrant redis`.
