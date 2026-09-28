@@ -16,6 +16,10 @@ export class EmbeddingsService {
     return this.client.dimension;
   }
 
+  get minScore(): number {
+    return this.client.minScore;
+  }
+
   /**
    * @param onBatch se llama tras cada lote con los textos procesados y el
    * total, para reportar progreso.

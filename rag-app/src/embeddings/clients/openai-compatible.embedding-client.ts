@@ -24,6 +24,10 @@ export class OpenAICompatibleEmbeddingClient implements EmbeddingClient {
     return this.spec.dimension;
   }
 
+  get minScore(): number {
+    return this.spec.minScore;
+  }
+
   embedDocuments(texts: string[]): Promise<number[][]> {
     return this.embed(texts.map((text) => this.spec.documentPrefix + text));
   }
