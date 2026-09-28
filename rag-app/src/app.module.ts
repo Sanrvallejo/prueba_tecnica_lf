@@ -1,6 +1,7 @@
 import { BullModule } from '@nestjs/bullmq';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ChatModule } from './chat/chat.module.js';
 import { DocumentsModule } from './documents/documents.module.js';
 import { EmbeddingsModule } from './embeddings/embeddings.module.js';
 import { LlmModule } from './llm/llm.module.js';
@@ -26,6 +27,7 @@ import { VectorStoreModule } from './vector-store/vector-store.module.js';
     VectorStoreModule,
     DocumentsModule,
     RetrievalModule,
+    ChatModule,
   ],
 })
 export class AppModule {}
