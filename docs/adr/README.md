@@ -21,3 +21,4 @@ Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md`
 | [0015](0015-ingesta-asincrona-con-bullmq.md) | Ingesta asíncrona con BullMQ | Aceptada |
 | [0016](0016-imagenes-en-disco-con-volumen.md) | Imágenes en disco servidas como estáticos, con volumen | Aceptada |
 | [0017](0017-verificacion-de-salud.md) | Verificación de salud con GET /health | Aceptada |
+| [0018](0018-busqueda-semantica-con-umbral.md) | Búsqueda semántica con umbral mínimo | Aceptada |
