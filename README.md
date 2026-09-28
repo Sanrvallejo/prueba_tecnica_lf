@@ -84,7 +84,7 @@ La arquitectura es en capas (controlador, servicio y providers por módulo) y la
 1. Clona el repositorio y entra en la carpeta:
 
    ```bash
-   git clone <url-del-repositorio>
+   git clone https://github.com/Sanrvallejo/prueba_tecnica_lf.git
    cd prueba_tecnica_lf
    ```
 
