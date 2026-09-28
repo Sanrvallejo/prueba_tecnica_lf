@@ -24,6 +24,9 @@ services:
     image: downloads.unstructured.io/unstructured-io/unstructured-api:latest
     ports:
       - "8000:8000"
+    environment:
+      # Por defecto exige 2048 MB libres y rechaza con 503 en máquinas con poca RAM.
+      UNSTRUCTURED_MEMORY_FREE_MINIMUM_MB: 512
 
   api:
     build: ./rag-app
