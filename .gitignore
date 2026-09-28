@@ -48,6 +48,9 @@ nyc_output/
 # Imágenes extraídas al ejecutar la API fuera de Docker
 storage/
 
+# Scripts locales de calibración (no forman parte de la aplicación)
+rag-app/src/scripts/
+
 # temp directory
 .temp
 .tmp
