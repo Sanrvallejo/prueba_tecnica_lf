@@ -22,3 +22,6 @@ Cada decisión de arquitectura se registra en su propio archivo `NNNN-titulo.md`
 | [0016](0016-imagenes-en-disco-con-volumen.md) | Imágenes en disco servidas como estáticos, con volumen | Aceptada |
 | [0017](0017-verificacion-de-salud.md) | Verificación de salud con GET /health | Aceptada |
 | [0018](0018-busqueda-semantica-con-umbral.md) | Búsqueda semántica con umbral mínimo | Aceptada |
+| [0019](0019-chat-sin-estado.md) | Chat sin estado con historial del frontend | Aceptada |
+| [0020](0020-prompt-defensivo.md) | Prompt defensivo con marca NO_INFO y citas | Aceptada |
+| [0021](0021-respuesta-con-fuentes-citadas.md) | Respuesta con fuentes citadas e imágenes deduplicadas | Aceptada |
