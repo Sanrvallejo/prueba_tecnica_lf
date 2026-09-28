@@ -30,3 +30,7 @@ Como protección ante un catálogo mal escrito, el cliente compara la longitud d
 ## Actualización (2026-09-27)
 
 Cada modelo del catálogo declara también `maxInputChars`, el máximo de caracteres por texto (prefijo incluido) que acepta con margen: 4000 para `nomic-embed-text`, que Ollama ejecuta con un contexto de 2048 tokens, y 24000 para `text-embedding-3-small`, con 8191 tokens. El cliente recorta cada texto a ese máximo antes de enviarlo. Así el límite queda junto a la dimensión y los prefijos, y los chunks que lo superan (por ejemplo, tablas grandes) no hacen fallar la ingesta. Ver [0014](0014-chunking-por-layout.md).
+
+## Actualización (2026-09-28)
+
+Cada modelo declara también `minScore`, la similitud coseno mínima para que un chunk se considere relevante. El umbral depende del modelo: cada uno distribuye sus puntajes de forma distinta, así que un mismo número no significa lo mismo en dos modelos. `nomic-embed-text` usa 0.61, calibrado con dos documentos reales; `text-embedding-3-small` usa 0.3 como valor provisional, sin calibrar. Ver [0018](0018-busqueda-semantica-con-umbral.md).
