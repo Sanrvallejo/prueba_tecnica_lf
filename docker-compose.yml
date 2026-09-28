@@ -38,6 +38,8 @@ services:
       QDRANT_URL: http://qdrant:6333
       OLLAMA_URL: http://ollama:11434
       UNSTRUCTURED_URL: http://unstructured:8000
+    volumes:
+      - api_images:/app/storage/images
     depends_on:
       - redis
       - qdrant
@@ -46,3 +48,4 @@ services:
 
 volumes:
   ollama_models:
+  api_images:

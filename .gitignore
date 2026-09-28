@@ -45,6 +45,9 @@ nyc_output/
 .env.production.local
 .env.local
 
+# Imágenes extraídas al ejecutar la API fuera de Docker
+storage/
+
 # temp directory
 .temp
 .tmp
