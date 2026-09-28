@@ -21,3 +21,7 @@ La carpeta se monta en el volumen `api_images`. Es una excepción a la política
 - El payload y la respuesta del chat solo llevan URLs; el navegador descarga y cachea las imágenes.
 - Las imágenes sobreviven a las reconstrucciones de la API. Si se recrea el contenedor de Qdrant (por ejemplo con `docker compose down`), sus datos se pierden y quedan imágenes huérfanas en `api_images` hasta que se borre ese volumen (`docker compose down -v`, que también borra los modelos de Ollama).
 - Las imágenes son públicas para quien conozca la URL, aceptable en un entorno de demostración; el `documentId` es un UUID difícil de adivinar.
+
+## Actualización (2026-09-28)
+
+Una misma imagen puede quedar asociada a varios chunks (ver la actualización de [0014](0014-chunking-por-layout.md)). `ImageStorageService` la guarda una sola vez, identificándola por su contenido, y todos esos chunks comparten la misma URL.
