@@ -48,7 +48,8 @@ export class OpenAICompatibleEmbeddingClient implements EmbeddingClient {
   private async embed(input: string[]): Promise<number[][]> {
     const response = await this.client.embeddings.create({
       model: this.model,
-      input,
+      // Se recorta para no exceder el contexto del modelo.
+      input: input.map((text) => text.slice(0, this.spec.maxInputChars)),
     });
     const vectors = response.data.map(({ embedding }) => embedding);
     this.checkDimension(vectors[0]);
